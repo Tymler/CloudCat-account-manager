@@ -1,0 +1,89 @@
+[data-component-app] {
+  width: 100%;
+  height: 100%;
+  .ant-menu {
+    border: 0;
+    background: transparent;
+    .ant-menu-item {
+      width: 100%;
+      color: white;
+      background-color: transparent;
+    }
+    .ant-menu-item:after {
+      border-right-color: $theme-second;
+    }
+    .ant-menu-item-selected {
+      color: $theme-primary;
+      background-color: $theme-second;
+    }
+  }
+  .side-bar {
+    position: relative;
+    background-color: $theme-primary;
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      padding: 10px 16px;
+      white-space: nowrap;
+      &.unfold {
+        padding-left: 15px;
+        transition: padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        .logo__name {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+      }
+      &.folded {
+        left: 0;
+        padding: 10px calc(50% - 50px /2);
+        text-overflow: clip;
+        transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        .logo__name {
+          opacity: 0;
+          transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+      }
+      &__icon {
+        img {
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+          border-radius: $border-radius-large;
+          background-color: white;
+        }
+      }
+      &__name {
+        margin-left: 8px;
+        color: white;
+        .title {
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 25px;
+        }
+        .sub-title {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+  .header {
+    padding: 0;
+    background-color: white;
+    .content-options-bar {
+      padding: 0 20px;
+      .icon-fold {
+        color: $text-dark-primary;
+      }
+      .icon-fold:hover {
+        color: $theme-primary;
+      }
+    }
+  }
+  .content-wrapper {
+    overflow: hidden scroll;
+  }
+}

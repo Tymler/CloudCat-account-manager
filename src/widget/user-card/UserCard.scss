@@ -1,0 +1,37 @@
+[data-component-user-card] {
+  .user-card {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 4px 14px 4px 6px;
+    border: 1px solid $theme-second;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    &__details {
+      width: fit-content;
+      margin-left: 4px;
+      white-space: nowrap;
+      color: $text-dark-primary;
+      .title {
+        width: fit-content;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .desc {
+        width: fit-content;
+        font-size: 12px;
+        line-height: 8px;
+        color: $text-dark-second;
+      }
+    }
+  }
+  .user-card:hover {
+    box-shadow:
+      0 1px 2px -2px rgba(0, 0, 0, 0.16),
+      0 3px 6px 0 rgba(0, 0, 0, 0.12),
+      0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  }
+}

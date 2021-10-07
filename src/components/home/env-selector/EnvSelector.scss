@@ -1,0 +1,11 @@
+[data-component-env-selector] {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    .env-card {
+      margin-bottom: 16px;
+    }
+  }
+}

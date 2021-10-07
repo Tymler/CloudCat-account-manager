@@ -1,0 +1,16 @@
+[data-component-sign-in] {
+  width: 100%;
+  .ant-card {
+    width: 300px;
+    .ant-card-head {
+      color: $theme-second;
+      background:$theme-primary;
+    }
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+  .btn-sign-in {
+    width: 100%;
+  }
+}
