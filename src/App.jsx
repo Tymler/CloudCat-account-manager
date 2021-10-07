@@ -105,7 +105,7 @@ function App (props) {
             <Switch>
               <Route path="/auth/:method" component={Auth} />
               <Route path="/home" component={Home} />
-              <Redirect to="/auth" />
+              <Redirect to="/auth/signup" />
             </Switch>
           </Content>
         </Layout>
