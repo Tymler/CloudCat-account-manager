@@ -16,14 +16,14 @@ module.exports = {
       use: [
         'style-loader',
         'css-loader',
-        'scope-css-loader'
+        // 'scope-css-loader'
       ]
     }, {
       test: /\.scss$/,
       use: [
         'style-loader',
         'css-loader',
-        'scope-css-loader',
+        // 'scope-css-loader',
         'sass-loader',
         {
           loader: 'sass-resources-loader',
@@ -37,7 +37,7 @@ module.exports = {
       use: [
         'style-loader',
         'css-loader',
-        'scope-css-loader',
+        // 'scope-css-loader',
         'sass-loader',
         {
           loader: 'sass-resources-loader',
