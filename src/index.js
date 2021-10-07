@@ -16,10 +16,10 @@ import App from '@/AppContainer';
 ReactDOM.render(
   // <React.StrictMode>
   // </React.StrictMode>
-  <Provider store={store}>
-    <BrowserRouter>
+  <BrowserRouter>
+    <Provider store={store}>
       <App />
-    </BrowserRouter>
-  </Provider>,
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
