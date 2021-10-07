@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 
 import "./Auth.scss";
 import $api from "@/server";
@@ -10,12 +10,9 @@ import SignUp from "./sign-up/SignUp";
 export default function Auth (props) {
   // data
   const history = useHistory()
-  const method = props.match.params.method
   const { userChange } = props
   // created
   useEffect(() => {
-    console.log('created')
-    console.log(method)
   }, [])
   // methods
   const doSignIn = (username, password) => {
@@ -55,8 +52,18 @@ export default function Auth (props) {
   return (
     <div data-component-auth>
       <div className="auth-wrapper">
-        {method === 'signin' ? <SignIn doSignIn={doSignIn} /> : ''}
-        {method === 'signup' ? <SignUp doSignUp={doSignUp} /> : ''}
+        <Switch>
+          <Route
+            path="/auth/signin" render={
+              () => (<SignIn doSignIn={doSignIn} />)
+            }
+          />
+          <Route
+            path="/auth/signup" render={
+              () => (<SignUp doSignUp={doSignUp} />)
+            }
+          />
+        </Switch>
       </div>
     </div>
   )

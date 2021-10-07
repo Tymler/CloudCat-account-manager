@@ -103,7 +103,7 @@ function App (props) {
           </Header>
           <Content className="content-wrapper">
             <Switch>
-              <Route path="/auth/:method" component={Auth} />
+              <Route path="/auth" component={Auth} />
               <Route path="/home" component={Home} />
               <Redirect to="/home" />
             </Switch>
