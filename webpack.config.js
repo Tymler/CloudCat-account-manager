@@ -7,8 +7,9 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
-    filename: `[name].prod.js`,
-    path: resolve(__dirname, 'prod')
+    filename: `js/[name].prod.js`,
+    path: resolve(__dirname, './prod'),
+    publicPath: "/"
   },
   module: {
     rules: [{
