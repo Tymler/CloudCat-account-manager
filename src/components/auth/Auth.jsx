@@ -14,6 +14,8 @@ export default function Auth (props) {
   const { userChange } = props
   // created
   useEffect(() => {
+    console.log('created')
+    console.log(method)
   }, [])
   // methods
   const doSignIn = (username, password) => {
